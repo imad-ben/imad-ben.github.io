@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Le Grand Bazar / Details</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body bgcolor="#8B4F4F">
+    <ul>
+      <li><a href="index.html">LeGrandBazard</a></li>
+      <li class="dropdown">
+         <a href="javascript:void(0)" class="dropbtn">articles</a>
+         <div class="dropdown-content">
+           <a href="lustres.html">Lustres</a>
+           <a href="thermos.html">thermos</a>
+           <a href="serviceatable.html">service a table</a>
+           <a href="serviceacaffee.html">service a caffee</a>
+           <a href="lampeatable.html">lampe a table</a>
+           <a href="electro-menager.html">electro-menager</a>
+
+         </div>
+      <li style="float:right;"><a href="details.html">Details</a></li>
+<li><a href="index.html">Back</a></li>
+
+    </ul>
+    <br><br><br>
+    <div id="map" style="width:100%;height:500px"></div>
+
+    <script>
+    function myMap() {
+      var mapCanvas = document.getElementById("map");
+      var myCenter = new google.maps.LatLng(36.50957579368161,1.3059461116790771);
+      var mapOptions = {center: myCenter, zoom: 12};
+      var map = new google.maps.Map(mapCanvas,mapOptions);
+      var marker = new google.maps.Marker({
+        position: myCenter,
+        animation: google.maps.Animation.BOUNCE
+      });
+      marker.setMap(map);
+    }
+    </script>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLF9XIx-WHCiUNOG4X7OX08TMc-6khsuk&callback=myMap"></script>
+
+</script>
+<div>
+<p style="font-size:;" id="construction">
+  notre site est en cours de construction...
+</p>
+</div>
+  </body>
+</html>
